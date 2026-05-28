@@ -1,0 +1,428 @@
+Voici une landing page HTML5 complète pour une montre connectée de luxe. Elle présente un design élégant et responsive, avec un contenu réel et immersif.
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>L'Éclat du Temps · Montre connectée de luxe</title>
+  <!-- Google Fonts : Playfair Display + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (gratuit) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #faf8f5;
+      color: #1e1b1a;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* --- HEADER LUXE --- */
+    .header {
+      padding: 28px 0 12px;
+      border-bottom: 1px solid rgba(30, 27, 26, 0.08);
+      background: #faf8f5;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #1e1b1a;
+    }
+    .logo span {
+      font-weight: 600;
+      color: #b79a6b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-weight: 400;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #2e2a28;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #b79a6b;
+    }
+    .header-icon {
+      display: flex;
+      gap: 1.2rem;
+      color: #1e1b1a;
+    }
+    .header-icon i {
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .header-icon i:hover {
+      color: #b79a6b;
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      padding: 60px 0 70px;
+      background: #faf8f5;
+    }
+
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero-content {
+      flex: 1 1 45%;
+    }
+
+    .hero-badge {
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #b79a6b;
+      border: 1px solid #b79a6b;
+      display: inline-block;
+      padding: 6px 18px;
+      margin-bottom: 28px;
+      font-weight: 600;
+    }
+
+    .hero-title {
+      font-size: 3.8rem;
+      line-height: 1.1;
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: #b79a6b;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: #3d3734;
+      max-width: 480px;
+      margin-bottom: 36px;
+      font-weight: 300;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .btn-primary {
+      background: #1e1b1a;
+      color: #faf8f5;
+      border: none;
+      padding: 16px 44px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primary:hover {
+      background: #b79a6b;
+      color: #1e1b1a;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #1e1b1a;
+      padding: 16px 44px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      color: #1e1b1a;
+      display: inline-block;
+    }
+    .btn-outline:hover {
+      border-color: #b79a6b;
+      color: #b79a6b;
+    }
+
+    .hero-image {
+      flex: 1 1 45%;
+      text-align: center;
+    }
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      filter: drop-shadow(0 20px 30px rgba(0,0,0,0.08));
+    }
+
+    /* --- CARACTÉRISTIQUES LUXE --- */
+    .features {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #b79a6b;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+      margin-bottom: 18px;
+    }
+
+    .section-sub {
+      color: #4a4340;
+      max-width: 600px;
+      margin-bottom: 60px;
+      font-weight: 300;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px 30px;
+    }
+
+    .feature-card {
+      padding: 12px 0;
+      border-top: 1px solid #e6dfd9;
+    }
+    .feature-icon {
+      font-size: 2rem;
+      color: #b79a6b;
+      margin: 20px 0 12px;
+    }
+    .feature-card h3 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      color: #4a4340;
+      font-weight: 300;
+      font-size: 0.95rem;
+    }
+
+    /* --- PRODUIT / GALERIE --- */
+    .product-showcase {
+      padding: 80px 0;
+      background: #f4f0eb;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .product-visual {
+      flex: 1 1 45%;
+      text-align: center;
+    }
+    .product-visual img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 25px 40px -15px rgba(0,0,0,0.15);
+    }
+
+    .product-detail {
+      flex: 1 1 45%;
+    }
+    .product-detail h2 {
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+    }
+    .product-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #b79a6b;
+      margin: 20px 0 10px;
+    }
+    .product-price small {
+      font-size: 1rem;
+      color: #4a4340;
+      text-decoration: line-through;
+      margin-left: 16px;
+      font-family: 'Inter', sans-serif;
+    }
+    .product-desc {
+      margin: 24px 0 30px;
+      color: #3d3734;
+      font-weight: 300;
+    }
+    .product-specs {
+      list-style: none;
+      margin: 20px 0 30px;
+    }
+    .product-specs li {
+      padding: 8px 0;
+      border-bottom: 1px solid #ddd6cf;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .product-specs i {
+      color: #b79a6b;
+      width: 20px;
+    }
+
+    /* --- TÉMOIGNAGE --- */
+    .testimonial {
+      padding: 80px 0;
+      background: #1e1b1a;
+      color: #faf8f5;
+      text-align: center;
+    }
+    .testimonial blockquote {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .testimonial i {
+      color: #b79a6b;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      opacity: 0.7;
+    }
+    .testimonial p {
+      font-size: 1.6rem;
+      font-family: 'Playfair Display', serif;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+    .testimonial cite {
+      display: block;
+      margin-top: 30px;
+      font-style: normal;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      color: #b79a6b;
+    }
+
+    /* --- NEWSLETTER / CONTACT --- */
+    .newsletter {
+      padding: 70px 0;
+      background: #faf8f5;
+      text-align: center;
+    }
+    .newsletter h3 {
+      font-size: 2.2rem;
+    }
+    .newsletter p {
+      color: #4a4340;
+      margin: 16px 0 30px;
+    }
+    .newsletter-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .newsletter-form input {
+      flex: 1 1 200px;
+      padding: 16px 20px;
+      border: 1px solid #d6cec6;
+      background: white;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.95rem;
+    }
+    .newsletter-form button {
+      background: #1e1b1a;
+      color: white;
+      border: none;
+      padding: 16px 36px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .newsletter-form button:hover {
+      background: #b79a6b;
+      color: #1e1b1a;
+    }
+
+    /* --- FOOTER --- */
+    .footer {
+      padding: 40px 0 30px;
+      border-top: 1px solid #e0d8d0;
+      background: #faf8f5;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .footer-brand .logo {
+      font-size: 1.6rem;
+    }
+    .footer-links {
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+    .footer-links ul {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+    .footer-links a {
+      text-decoration: none;
+      color: #3d3734;
+      font-weight
